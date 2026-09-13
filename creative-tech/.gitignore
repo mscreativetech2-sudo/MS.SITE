@@ -1,0 +1,8 @@
+# ملفات كبيرة سيتم رفعها لاحقًا إلى Cloudflare R2
+*.zip
+*.apk
+*.psd
+*.ai
+*.mp4
+*.mov
+*.rar
