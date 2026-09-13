@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ابدأ مشروعك - CREATIVE TECH">
+    <title>CREATIVE TECH - ابدأ مشروعك</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+
+        <a href="index.html" class="logo">
+            <div class="logo-img">
+                <img src="assets/images/logo.png" alt="Creative Tech Logo">
+            </div>
+        </a>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+
+            <a href="index.html">الرئيسية</a>
+
+            <a href="services.html">خدماتنا</a>
+
+            <a href="works.html">أعمالنا</a>
+
+            <a href="about.html">من نحن</a>
+            
+            <a href="contact.html"
+               class="btn-outline mobile-only-btn"
+               style="display:none;">
+                تواصل معنا &larr;
+            </a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <a href="contact.html" class="btn-outline">
+                تواصل معنا &larr;
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- Start Project Section -->
+    <section style="
+        padding-top: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    ">
+
+        <div class="glass-card fade-in neon-border-purple"
+             style="
+                width: 100%;
+                max-width: 900px;
+                padding: 50px;
+             ">
+
+            <div class="section-title" style="margin-bottom: 40px;">
+
+                <h1 style="
+                    font-size: 36px;
+                    font-weight: 800;
+                    margin-bottom: 10px;
+                    color: var(--purple);
+                ">
+                    ابدأ مشروعك
+                </h1>
+
+                <p style="font-size: 16px;">
+                    أخبرنا عن مشروعك، وسنساعدك على تحويل فكرتك إلى حل رقمي متكامل.
+                </p>
+
+            </div>
+
+
+            <!-- Start Project Form -->
+            <form
+                id="project-form"
+                action="https://formspree.io/f/myeyarbz"
+                method="POST"
+            >
+
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 20px;
+                    "
+                    class="grid-2"
+                >
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+
+                        <label style="
+                            display: block;
+                            margin-bottom: 10px;
+                            font-weight: bold;
+                        ">
+                            الاسم بالكامل *
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="proj-name"
+                            name="name"
+                            placeholder="أدخل اسمك الكامل"
+                        >
+
+                        <div
+                            class="error-msg"
+                            id="err-proj-name"
+                        >
+                            الاسم مطلوب
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label style="
+                            display: block;
+                            margin-bottom: 10px;
+                            font-weight: bold;
+                        ">
+                            البريد الإلكتروني *
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="proj-email"
+                            name="email"
+                            placeholder="example@domain.com"
+                            dir="ltr"
+                            style="text-align: right;"
+                        >
+
+                        <div
+                            class="error-msg"
+                            id="err-proj-email"
+                        >
+                            البريد الإلكتروني غير صحيح
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+                    <div class="form-group">
+
+                        <label style="
+                            display: block;
+                            margin-bottom: 10px;
+                            font-weight: bold;
+                        ">
+                            رقم الهاتف *
+                        </label>
+
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="proj-phone"
+                            name="phone"
+                            placeholder="رقم الهاتف مع رمز الدولة"
+                            dir="ltr"
+                            style="text-align: right;"
+                        >
+
+                        <div
+                            class="error-msg"
+                            id="err-proj-phone"
+                        >
+                            رقم الهاتف مطلوب
+                        </div>
+
+                    </div>
+
+
+                    <!-- Project Type -->
+                    <div class="form-group">
+
+                        <label style="
+                            display: block;
+                            margin-bottom: 10px;
+                            font-weight: bold;
+                        ">
+                            نوع المشروع *
+                        </label>
+
+                        <select
+                            class="form-control"
+                            id="proj-type"
+                            name="project_type"
+                        >
+
+                            <option value="">
+                                اختر نوع المشروع
+                            </option>
+
+                            <option value="موقع إلكتروني">
+                                موقع إلكتروني
+                            </option>
+
+                            <option value="تطبيق جوال">
+                                تطبيق جوال
+                            </option>
+
+                            <option value="UI/UX">
+                                UI/UX
+                            </option>
+
+                            <option value="نظام إلكتروني">
+                                نظام إلكتروني
+                            </option>
+
+                            <option value="منصة إلكترونية">
+                                منصة إلكترونية
+                            </option>
+
+                            <option value="متجر إلكتروني">
+                                متجر إلكتروني
+                            </option>
+
+                            <option value="أخرى">
+                                أخرى
+                            </option>
+
+                        </select>
+
+                        <div
+                            class="error-msg"
+                            id="err-proj-type"
+                        >
+                            الرجاء اختيار نوع المشروع
+                        </div>
+
+                    </div>
+
+
+                    <!-- Project Name -->
+                    <div
+                        class="form-group"
+                        style="grid-column: 1 / -1;"
+                    >
+
+                        <label style="
+                            display: block;
+                            margin-bottom: 10px;
+                            font-weight: bold;
+                        ">
+                            اسم المشروع
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="proj-title"
+                            name="project_name"
+                            placeholder="ما هو اسم مشروعك؟"
+                        >
+
+                    </div>
+
+
+                    <!-- Project Idea -->
+                    <div
+                        class="form-group"
+                        style="grid-column: 1 / -1;"
+                    >
+
+                        <label style="
+                            display: block;
+                            margin-bottom: 10px;
+                            font-weight: bold;
+                        ">
+                            فكرة المشروع *
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="proj-desc"
+                            name="project_description"
+                            rows="4"
+                            placeholder="اشرح لنا فكرة مشروعك باختصار..."
+                        ></textarea>
+
+                        <div
+                            class="error-msg"
+                            id="err-proj-desc"
+                        >
+                            الرجاء كتابة تفاصيل المشروع
+                        </div>
+
+                    </div>
+
+
+                    <!-- Budget -->
+                    <div class="form-group">
+
+                        <label style="
+                            display: block;
+                            margin-bottom: 10px;
+                            font-weight: bold;
+                        ">
+                            الميزانية المتوقعة
+                        </label>
+
+                        <select
+                            class="form-control"
+                            id="proj-budget"
+                            name="budget"
+                        >
+
+                            <option value="">
+                                حدد الميزانية
+                            </option>
+
+                            <option value="أقل من 200$">
+                                أقل من 200$
+                            </option>
+
+                            <option value="500$ - 1000$">
+                                500$ - 1000$
+                            </option>
+
+                            <option value="1000$ - 3000$">
+                                1000$ - 3000$
+                            </option>
+
+                            <option value="أكثر من 3000$">
+                                أكثر من 3000$
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Expected Delivery Date -->
+                    <div class="form-group">
+
+                        <label style="
+                            display: block;
+                            margin-bottom: 10px;
+                            font-weight: bold;
+                        ">
+                            موعد التسليم المتوقع
+                        </label>
+<input
+    type="date"
+    class="form-control"
+    id="proj-date"
+    name="delivery_date"
+>
+                    </div>
+
+                </div>
+
+
+                <!-- Submit Button -->
+                <button
+                    type="submit"
+                    class="btn-primary"
+                    style="
+                        width: 100%;
+                        justify-content: center;
+                        font-size: 18px;
+                        padding: 15px;
+                        margin-top: 20px;
+                    "
+                >
+                    إرسال طلب مشروعك
+                </button>
+
+
+                <!-- Success Message -->
+                <div
+                    class="success-msg"
+                    id="project-success"
+                >
+                    <strong>تم استلام طلب مشروعك بنجاح</strong>
+                    <br>
+                    سنتواصل معك لمناقشة التفاصيل والخطوات القادمة.
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-bottom">
+
+            <p>
+                Creative Tech &copy; 2026
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+
+</body>
+</html>

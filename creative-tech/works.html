@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="أعمالنا ومشاريعنا - CREATIVE TECH">
+    <title>CREATIVE TECH - أعمالنا</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* Works Specific Styles */
+        .filter-btn {
+            background: rgba(6, 22, 56, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .filter-btn:hover {
+            border-color: var(--cyan);
+            background: rgba(0, 217, 255, 0.1);
+        }
+        .filter-btn.active {
+            background: linear-gradient(90deg, var(--blue), var(--purple));
+            border-color: transparent;
+            box-shadow: 0 4px 15px rgba(138, 46, 255, 0.3);
+        }
+        .filters-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background: rgba(6, 22, 56, 0.4);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition-fast);
+            opacity: 1;
+            transform: scale(1);
+        }
+        .project-card.hide {
+            display: none;
+        }
+        .project-card:hover {
+            border-color: rgba(0, 217, 255, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .project-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .project-type {
+            font-size: 12px;
+            color: var(--cyan);
+            margin-bottom: 10px;
+        }
+        .project-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .project-desc {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <a href="index.html" class="logo">
+            <div class="logo-img"><img src="assets/images/logo.png" alt="Creative Tech Logo"></div>
+        </a>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="services.html">خدماتنا</a>
+            <a href="works.html" class="active">أعمالنا</a>
+            <a href="about.html">من نحن</a>
+            
+            <a href="contact.html" class="btn-outline mobile-only-btn" style="display:none;">
+                تواصل معنا &larr;
+            </a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="contact.html" class="btn-outline">
+                تواصل معنا &larr;
+            </a>
+        </div>
+    </header>
+
+    <!-- Works Header -->
+    <section style="padding-top: 150px; text-align: center;">
+        <span style="background: rgba(0, 217, 255, 0.1); color: var(--cyan); padding: 8px 15px; border-radius: 20px; font-size: 14px; margin-bottom: 20px; display: inline-block; border: 1px solid rgba(0, 217, 255, 0.3);">أعمالنا</span>
+        <h1 style="font-size: 48px; font-weight: 800; line-height: 1.4; margin-bottom: 20px;">
+            مشاريعنا .. <br>
+            تعكس <span style="color: var(--cyan);">خبرتنا</span> <span style="color: var(--purple);">وإبداعنا</span>
+        </h1>
+        <p style="font-size: 18px; color: var(--text-gray); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            نحول أفكارك إلى حلول رقمية متكاملة. من تصميم المواقع والتطبيقات إلى الأنظمة الذكية، لنصنع معك تجربة استثنائية.
+        </p>
+        <a href="start-project.html" class="btn-primary">ابدأ مشروعك الآن</a>
+    </section>
+
+    <!-- Projects Section -->
+    <section style="padding-top: 50px;">
+        
+        <!-- Filters -->
+        <div class="filters-container fade-in">
+            <button class="filter-btn active" data-filter="all">جميع الأعمال</button>
+            <button class="filter-btn" data-filter="web">المواقع الإلكترونية</button>
+            <button class="filter-btn" data-filter="mobile">تطبيقات الجوال</button>
+            <button class="filter-btn" data-filter="game">تطبيقات الألعاب</button>
+            <button class="filter-btn" data-filter="laser">تصاميم ليزر </button>
+           <!-- <button class="filter-btn" data-filter="system">أنظمة تشغيل</button> -->
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid-4" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;" id="projects-grid">
+           
+            <!-- Project 1 -->
+            <div class="project-card fade-in" data-category="web">
+                <div style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/images/work1.png" alt="">
+                </div>
+                <div class="project-content">
+                    <span class="project-type">المواقع الإلكترونية</span>
+                    <h3 class="project-title">منصة اقرأ</h3>
+                    <p class="project-desc">من الفكرة إلى منصة متكاملة.. تجربة رقمية تجمع المحتوى والفيديو.</p>
+                    <a href="project-details.html" class="btn-outline" style="width: 100%; justify-content: center;">التفاصيل &larr;</a>
+                </div>
+            </div>
+
+
+<!-- Project 2 -->
+            <div class="project-card fade-in" data-category="mobile">
+                <div style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/images/work2.png" alt="">
+                </div>
+                <div class="project-content">
+                    <span class="project-type">تطبيقات الجوال</span>
+                    <h3 class="project-title">تطبيق أنيس الذكر</h3>
+                    <p class="project-desc">تطبيق إسلامي يهدف إلى تسهيل الأذكار اليومية بطريق عصرية.</p>
+                    <a href="project-details2.html" class="btn-outline" style="width: 100%; justify-content: center;">التفاصيل &larr;</a>
+                </div>
+            </div>
+
+ <!-- Project 3 -->
+            <div class="project-card fade-in" data-category="laser">
+                <div style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/images/servelesser1.png" alt="">
+                </div>
+                <div class="project-content">
+                    <span class="project-type">تصاميم  ليزر</span>
+                    <h3 class="project-title">Beauty Style</h3>
+                    <p class="project-desc">من فكرتك إلى منتجك — نصمم ونقص وننفذ حسب الطلب. </p>
+                    <a href="project-details3.html" class="btn-outline" style="width: 100%; justify-content: center;">التفاصيل &larr;</a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card fade-in" data-category="game">
+                <div style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/images/work4.png" alt="">
+                </div>
+                <div class="project-content">
+                    <span class="project-type">تطبيقات الألعاب</span>
+                    <h3 class="project-title">تطبيق منارات الإيمان</h3>
+                    <p class="project-desc">حولنا فكرة شرح الدروس إلى لعبة تفاعلية هادفة.</p>
+                    <a href="project-details4.html" class="btn-outline" style="width: 100%; justify-content: center;">التفاصيل &larr;</a>
+                </div>
+            </div>
+
+           
+
+            
+            
+            
+            <!-- Add more easily by duplicating -->
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>Creative Tech &copy; 2026</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/works.js"></script>
+</body>
+</html>

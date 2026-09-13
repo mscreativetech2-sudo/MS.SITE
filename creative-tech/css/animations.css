@@ -1,0 +1,54 @@
+/* --- Animations --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-right.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-left.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Keyframes for soft glow and floating */
+@keyframes softGlow {
+  0% { box-shadow: 0 0 10px rgba(0, 217, 255, 0.1); }
+  50% { box-shadow: 0 0 25px rgba(0, 217, 255, 0.3); }
+  100% { box-shadow: 0 0 10px rgba(0, 217, 255, 0.1); }
+}
+
+.glowing-element {
+  animation: softGlow 3s infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+.floating-element {
+  animation: float 4s ease-in-out infinite;
+}

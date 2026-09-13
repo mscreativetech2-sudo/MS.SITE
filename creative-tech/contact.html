@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تواصل معنا - CREATIVE TECH">
+    <title>CREATIVE TECH - تواصل معنا</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+
+        <a href="index.html" class="logo">
+            <div class="logo-img">
+                <img src="assets/images/logo.png" alt="Creative Tech Logo">
+            </div>
+        </a>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+
+            <a href="index.html">الرئيسية</a>
+
+            <a href="services.html">خدماتنا</a>
+
+            <a href="works.html">أعمالنا</a>
+
+            <a href="about.html">من نحن</a>
+
+            <a href="contact.html"
+               class="btn-outline mobile-only-btn active"
+               style="display:none;">
+                تواصل معنا &larr;
+            </a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <a href="contact.html" class="btn-outline active">
+                تواصل معنا &larr;
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- Contact Section -->
+    <section style="
+        padding-top: 150px;
+        min-height: calc(100vh - 300px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    ">
+
+        <div class="glass-card fade-in neon-border"
+             style="
+                width: 100%;
+                max-width: 800px;
+                padding: 50px;
+             ">
+
+            <div class="section-title" style="margin-bottom: 40px;">
+
+                <h1 style="
+                    font-size: 36px;
+                    font-weight: 800;
+                    margin-bottom: 10px;
+                    color: var(--cyan);
+                ">
+                    تواصل معنا
+                </h1>
+
+                <p style="font-size: 16px;">
+                    اترك رسالتك وسنقوم بالاتصال بك
+                </p>
+
+            </div>
+
+
+            <!-- Contact Form -->
+            <form
+                id="contact-form"
+                action="https://formspree.io/f/xdeovqln"
+                method="POST"
+            >
+
+                <!-- Name + Email -->
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 20px;
+                    "
+                    class="grid-2"
+                >
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+
+                        <label
+                            style="
+                                display: block;
+                                margin-bottom: 10px;
+                                font-weight: bold;
+                            "
+                        >
+                            الاسم الكامل *
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="contact-name"
+                            name="name"
+                            placeholder="أدخل اسمك الكامل"
+                        >
+
+                        <div
+                            class="error-msg"
+                            id="err-contact-name"
+                        >
+                            الاسم مطلوب
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label
+                            style="
+                                display: block;
+                                margin-bottom: 10px;
+                                font-weight: bold;
+                            "
+                        >
+                            البريد الإلكتروني *
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="contact-email"
+                            name="email"
+                            placeholder="example@domain.com"
+                            dir="ltr"
+                            style="text-align: right;"
+                        >
+
+                        <div
+                            class="error-msg"
+                            id="err-contact-email"
+                        >
+                            البريد الإلكتروني غير صحيح
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subject -->
+                <div class="form-group">
+
+                    <label
+                        style="
+                            display: block;
+                            margin-bottom: 10px;
+                            font-weight: bold;
+                        "
+                    >
+                        الموضوع *
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="contact-subject"
+                        name="subject"
+                        placeholder="موضوع الرسالة"
+                    >
+
+                    <div
+                        class="error-msg"
+                        id="err-contact-subject"
+                    >
+                        الموضوع مطلوب
+                    </div>
+
+                </div>
+
+
+                <!-- Message -->
+                <div class="form-group">
+
+                    <label
+                        style="
+                            display: block;
+                            margin-bottom: 10px;
+                            font-weight: bold;
+                        "
+                    >
+                        الرسالة *
+                    </label>
+
+                    <textarea
+                        class="form-control"
+                        id="contact-message"
+                        name="message"
+                        rows="5"
+                        placeholder="اكتب رسالتك هنا..."
+                    ></textarea>
+
+                    <div
+                        class="error-msg"
+                        id="err-contact-message"
+                    >
+                        الرسالة مطلوبة
+                    </div>
+
+                </div>
+
+
+                <!-- Submit Button -->
+                <button
+                    type="submit"
+                    class="btn-primary"
+                    style="
+                        width: 100%;
+                        justify-content: center;
+                        font-size: 18px;
+                        padding: 15px;
+                    "
+                >
+                    إرسال الرسالة
+                </button>
+
+
+                <!-- Success Message -->
+                <div
+                    class="success-msg"
+                    id="contact-success"
+                >
+                    <strong>تم إرسال رسالتك بنجاح</strong>
+                    <br>
+                    سنتواصل معك في أقرب وقت.
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-bottom">
+
+            <p>
+                Creative Tech &copy; 2026
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+
+</body>
+</html>
